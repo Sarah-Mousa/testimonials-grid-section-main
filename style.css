@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --person-1-bg: hsl(263, 55%, 52%);
+  --light-blue: hsl(210, 46%, 95%);
+  --daniel-white: hsl(0, 0%, 96%);
+  --person1-border: hsl(263, 50%, 77%);
+  --verified-c: hsl(0, 0%, 81%);
+  --white: hsl(0, 0%, 100%);
+  --person-2-bg: hsl(217, 19%, 35%);
+  --veryDark-blue: hsl(219, 29%, 14%);
+}
+body {
+  width: 100%;
+  background-color: var(--light-blue);
+  font-family: "Barlow Semi Condensed", serif;
+}
+main {
+  width: 100%;
+  max-width: 375px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 2rem;
+}
+.all__persons {
+  border-radius: 0.7rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem 1.1rem;
+}
+.person__one {
+  background-color: var(--person-1-bg);
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  background-size: 30%;
+}
+.name {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.person__one img {
+  border: solid 2px var(--person1-border);
+}
+.name-1 h2,
+.name-3 h2,
+.name-4 h2,
+.name-5 h2 {
+  color: var(--daniel-white);
+  transform: scaleY(1);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.name-1 p,
+.name-3 p,
+.name-4 p,
+.name-5 p {
+  color: var(--verified-c);
+  font-size: 1rem;
+}
+img {
+  border-radius: 50%;
+  width: 2.5rem;
+}
+.p-1-1,
+.p-2-1,
+.p-3-1,
+.p-4-1,
+.p-5-1 {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1.6em;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.p-1-2,
+.p-2-2,
+.p-3-2,
+.p-4-2 {
+  color: var(--verified-c);
+  padding: 0 0.5rem;
+  font-size: 1.08em;
+}
+
+.person__two {
+  background-color: var(--person-2-bg);
+}
+.p-2-2 {
+  font-size: 1em;
+}
+.person__three,
+.person__five {
+  background-color: var(--white);
+}
+.name-3 h2,
+.name-5 h2 {
+  color: hsl(217, 19%, 30%);
+}
+
+.p-3-1,
+.p-5-1 {
+  color: hsl(217, 19%, 30%);
+}
+.p-3-2,
+.name-3 p,
+.p-5-2 {
+  color: hsl(0, 0%, 50%);
+}
+.person__four {
+  background-color: var(--veryDark-blue);
+}
+.p-4-2 {
+  padding: 0 0.2rem;
+  font-size: 1.05em;
+}
+.person__four img {
+  border: solid 2px var(--person-1-bg);
+}
+.p-5-2 {
+  font-size: 1.07rem;
+  padding-right: 0.1rem;
+}
+
+@media (min-width: 1110px) {
+  main {
+    max-width: 1110px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    gap: 1.5rem;
+  }
+  .person__one {
+    grid-area: daniel;
+  }
+  .person__two {
+    grid-area: jonathan;
+  }
+  .person__three {
+    grid-area: jeanette;
+  }
+  .person__four {
+    grid-area: patrick;
+  }
+  .person__five {
+    grid-area: kira;
+  }
+  .p-1-1,
+  .p-2-1,
+  .p-3-1,
+  .p-4-1,
+  .p-5-1 {
+    font-size: 1.3em;
+  }
+  .p-3-1 {
+    padding-right: 1rem;
+  }
+  .p-1-2,
+  .p-2-2,
+  .p-3-2,
+  .p-4-2 {
+    font-size: 1.03em;
+    padding: 0;
+  }
+}
